@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    background:  linear-gradient(to bottom right, #0f3443, #34e89e);
+
+    min-width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
