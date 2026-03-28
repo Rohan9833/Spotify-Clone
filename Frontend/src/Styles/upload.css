@@ -1,53 +1,122 @@
+/* ============================================================
+   Upload Page - Scoped Styles (No Global Changes)
+   Targeting ONLY elements inside .container for Upload page
+============================================================ */
+
+/* 1. Main Wrapper (Targeting by class only) */
 .container {
+  /* Positioning - Isko center karne ke liye margin auto best hai */
+  margin: 60px auto; 
+  background-color: #547792; /* Medium Blue Layer */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  width: 90%; 
+  max-width: 480px; 
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  border: 1px solid rgba(239, 210, 176, 0.1);
+  box-sizing: border-box; /* Padding handling */
+}
+
+/* 2. Dropzone Area (Label) */
+.container .upload-cover {
+  display: flex !important; /* Ensure it stays flex */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  margin-top: 5rem;
+  width: 100%;
+  padding: 45px 20px;
+  border: 2px dashed #FFC570; /* Highlight Gold */
+  border-radius: 15px;
+  background-color: rgba(26, 50, 99, 0.4); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  box-sizing: border-box;
 }
 
-.upload-cover {
-  height: 20rem;
-  width: 20rem;
-  /* background-color: red; */
-  display: block;
-  /* margin: auto; */
-  border: 2px solid white;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(to bottom right, #525564, #2d3039);
+.container .upload-cover:hover {
+  background-color: rgba(255, 197, 112, 0.1);
+  border-style: solid;
 }
-.uploadheadding {
+
+/* 3. Headings & Text inside .container */
+.container .uploadheadding {
+  color: #FFC570 !important; /* Force Gold for this page only */
+  font-size: 1.6rem;
+  margin: 10px 0;
+  font-weight: 700;
   text-align: center;
 }
 
-.title {
-  background: linear-gradient(to bottom right, #68cad8, #26a3a3);
-  color: white;
-  height: 40px;
-  width: 18rem;
+.container .uploadtext {
+  color: #EFD2B0 !important;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.8;
   text-align: center;
-  border-radius: 50px;
+}
+
+/* 4. Title Input - Specific targeting */
+.container .title {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #1A3263; /* Deep Blue Input */
+  border: 1px solid rgba(239, 210, 176, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.container .title:focus {
+  border-color: #FFC570;
+  box-shadow: 0 0 10px rgba(255, 197, 112, 0.2);
+}
+
+/* 5. Submit Button - Specific targeting */
+.container .sumbit {
+  width: 100%;
+  background: #FFC570; /* Gold */
+  color: #1A3263; /* Contrast Text */
+  padding: 15px;
   border: none;
-  /* font-weight: bold; */
-}
-.title::placeholder {
-  color: white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.sumbit {
-  width: 15rem;
-  border-radius: 50px;
-  /* background-color: #37BDBF; */
-  background: linear-gradient(to bottom right, #68cad8, #26a3a3);
-  color: white;
-  /* font-weight: bold; */
+.container .sumbit:hover {
+  background-color: #EFD2B0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 197, 112, 0.3);
 }
-.sumbit:hover {
-  background-color: #2d989a;
+
+/* ============================================================
+   RESPONSIVE LOGIC (Specific to .container)
+============================================================ */
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .uploadheadding {
+    font-size: 1.3rem;
+  }
+  
+  .container .upload-cover {
+    padding: 30px 10px;
+  }
 }

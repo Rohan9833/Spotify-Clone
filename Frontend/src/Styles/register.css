@@ -1,83 +1,162 @@
-/* Container aur Background same rahega */
+/* ============================================================
+   Register Page - Scoped Styles
+   Targeting ONLY elements inside .signup-container
+============================================================ */
+
 .signup-container {
-    /* background: linear-gradient(180deg, #2e2e3e 0%, #1a1a2e 100%); */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* Background page level pe handle na karke container ke upar rakha hai */
 }
 
-.signup-card {
-    width: 350px;
-    padding: 20px;
-    text-align: center;
+.signup-container .signup-card {
+  background-color: #547792; /* Medium Blue Layer */
+  padding: 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(239, 210, 176, 0.1);
+  text-align: center;
+  box-sizing: border-box;
 }
 
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
+/* Headings and Subtitle */
+.signup-container .signup-card h1 {
+  color: #FFC570; /* Gold */
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 
-.subtitle {
-    /* color: #8a8a9d; */
-    font-size: 0.9rem;
-    margin-bottom: 35px;
+.signup-container .signup-card .subtitle {
+  color: #EFD2B0; /* Cream */
+  opacity: 0.8;
+  margin-bottom: 30px;
+  font-size: 1rem;
 }
 
-/* Input Fields */
-.input-field {
-    background-color: #242435;
-    border: none;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 20px;
+/* Input Fields Wrapper */
+.signup-container .input-field {
+  display: flex;
+  align-items: center;
+  background-color: #1A3263; /* Dark Blue Input Background */
+  border: 1px solid rgba(239, 210, 176, 0.2);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
 }
 
-.input-field input {
-    background: transparent;
-    border: none;
-    color: white;
-    margin-left: 12px;
-    width: 100%;
-    outline: none;
+.signup-container .input-field:focus-within {
+  border-color: #FFC570;
+  box-shadow: 0 0 10px rgba(255, 197, 112, 0.15);
 }
 
-.input-field input::placeholder {
-    color: #6c6c7d;
+.signup-container .input-field span {
+  margin-right: 12px;
+  font-size: 1.2rem;
 }
 
-/* Signup Button */
-.signup-btn {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-top: 10px;
+.signup-container .input-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
 }
 
-/* Footer link */
-.login-footer {
-    margin-top: 60px;
-    font-size: 0.85rem;
-    /* color: #6c6c7d; */
+.signup-container .input-field input::placeholder {
+  color: #EFD2B0;
+  opacity: 0.5;
 }
 
-.login-link {
-    /* color: #4facfe; */
-    text-decoration: none;
-    margin-left: 5px;
+/* Radio Buttons Section */
+.signup-container input[type="radio"] {
+  display: none; /* Original radio chhupa do custom banayenge */
 }
 
+.signup-container label.user, 
+.signup-container label.artist {
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 10px 5px 25px 5px;
+  background-color: #1A3263;
+  color: #EFD2B0;
+  border: 1px solid rgba(239, 210, 176, 0.3);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-.user{
-    margin-right: 7rem;
+/* Radio selection logic using siblings */
+.signup-container input[type="radio"]:checked + label {
+  background-color: #FFC570;
+  color: #1A3263;
+  border-color: #FFC570;
+  transform: scale(1.05);
+}
+
+/* Sign Up Button */
+.signup-container .signup-btn {
+  width: 100%;
+  background-color: #FFC570;
+  color: #1A3263;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-container .signup-btn:hover {
+  background-color: #EFD2B0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 197, 112, 0.3);
+}
+
+/* Footer Section */
+.signup-container .login-footer {
+  margin-top: 25px;
+  color: #EFD2B0;
+  font-size: 0.9rem;
+}
+
+.signup-container .login-link {
+  color: #FFC570;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.signup-container .login-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+============================================================ */
+
+@media (max-width: 480px) {
+  .signup-container .signup-card {
+    padding: 30px 20px;
+  }
+  
+  .signup-container .signup-card h1 {
+    font-size: 1.8rem;
+  }
 }

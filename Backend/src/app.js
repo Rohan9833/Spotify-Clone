@@ -19,5 +19,6 @@ app.use(
 
 app.use("/api/auth",authroutes);
 app.use("/api/music",musicroutes);
+
 // app.use("api/album",musicroutes);
 module.exports = app;

@@ -1,0 +1,136 @@
+/* navbar.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(26, 50, 99, 0.9); /* #1A3263 with transparency */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(239, 210, 176, 0.1);
+  padding: 15px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #EFD2B0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pro-text {
+  color: #FFC570; /* Highlight Gold */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #EFD2B0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #FFC570;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 1px solid rgba(239, 210, 176, 0.2);
+  padding-left: 20px;
+}
+
+.nav-btn {
+  background: #FFC570;
+  color: #1A3263;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #EFD2B0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 197, 112, 0.3);
+}
+
+/* ... puraana CSS waisa hi rahega, bas niche ye add/update kar do ... */
+
+.menu-icon {
+  display: none; /* Desktop pe chhupa rahega */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFC570;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* Hamburger to 'X' animation (Optional but cool) */
+  .bar.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .bar.open:nth-child(2) { opacity: 0; }
+  .bar.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    /* right: -100%;  */
+    height: 100vh;
+    width: 70%;
+    background: #1A3263;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+
+  .nav-links.active {
+    right: 0; /* Menu sliding in */
+    display: flex;
+    
+  }
+
+  .nav-auth {
+    flex-direction: column;
+    border-left: none;
+    border-top: 1px solid rgba(239, 210, 176, 0.2);
+    padding-left: 0;
+    padding-top: 20px;
+    width: 80%;
+    text-align: center;
+  }
+}
