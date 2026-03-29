@@ -18,7 +18,7 @@ const login = () => {
     });
 
     await axios.post(
-      "http://localhost:3000/api/auth/register",
+      "https://spotify-clone-mvo1.onrender.com/api/auth/register",
       {
         email,
         password,

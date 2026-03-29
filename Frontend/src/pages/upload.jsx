@@ -20,7 +20,7 @@ const upload = () => {
     formData.append("music", file);
     formData.append("title", title);
 
-    await axios.post("http://localhost:3000/api/music/upload", formData, {
+    await axios.post("https://spotify-clone-mvo1.onrender.com/api/music/upload", formData, {
       withCredentials: true,
     });
     console.log("hello world");

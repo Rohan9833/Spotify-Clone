@@ -9,7 +9,7 @@ const HOME = () => {
 
   async function getthemall() {
     const result = await axios.get(
-      "http://localhost:3000/api/music/getallmusic",
+      "https://spotify-clone-mvo1.onrender.com/api/music/getallmusic",
     );
     Setsongs(result.data.musics);
   }

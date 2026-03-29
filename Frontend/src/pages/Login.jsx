@@ -12,7 +12,7 @@ const Login = () => {
 
     axios
       .post(
-        "http://localhost:3000/api/auth/login",
+        "https://spotify-clone-mvo1.onrender.com/api/auth/login",
         {
           email,
           password, 
