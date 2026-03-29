@@ -13,7 +13,8 @@ app.use(
   cors({
     origin:[
       "http://localhost:5173",
-      "https://spotify-clone-jvnb2591r-rohan-pals-projects-8a0d598b.vercel.app"
+      "https://spotify-clone-jvnb2591r-rohan-pals-projects-8a0d598b.vercel.app",
+      "https://rohanmusicplayer.vercel.app"
     ],
 
     credentials: true,
