@@ -11,7 +11,11 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin:[
+      "http://localhost:5173",
+      "https://spotify-clone-jvnb2591r-rohan-pals-projects-8a0d598b.vercel.app"
+    ],
+
     credentials: true,
   })
 );
