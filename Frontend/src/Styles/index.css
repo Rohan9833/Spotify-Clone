@@ -1,23 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  height: 100%;
-}
-body {
-  /* background:  linear-gradient(to bottom right, #0f3443, #34e89e); */
-  margin: 0;
-  padding: 0;
-  background-color: #1a3263; /* Deep Blue - Primary Base */
-  font-family:
-    "Inter",
-    -apple-system,
-    sans-serif;
-  color: #efd2b0; /* Light Cream - Text */
-
-  min-width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background-attachment: fixed;
-}
+* { scrollbar-width: thin; scrollbar-color: #303030 transparent; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #303030; border-radius: 999px; }
+::selection { background: #d8ff3e; color: #050505; }
